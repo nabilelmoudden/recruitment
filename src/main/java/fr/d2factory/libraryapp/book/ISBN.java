@@ -1,11 +1,12 @@
 package fr.d2factory.libraryapp.book;
 
 public class ISBN {
-    long isbnCode;
-    
-	public ISBN(long isbnCode) {
+    private long isbnCode;
+
+    public ISBN(long isbnCode) {
         this.isbnCode = isbnCode;
     }
+
 	public long getIsbnCode() {
 		return isbnCode;
 	}
@@ -14,7 +15,12 @@ public class ISBN {
 		this.isbnCode = isbnCode;
 	}
 
-    @Override
+	@Override
+	public String toString() {
+		return "ISBN [isbnCode=" + isbnCode + "]";
+	}
+
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -35,5 +41,4 @@ public class ISBN {
 			return false;
 		return true;
 	}
-
 }
